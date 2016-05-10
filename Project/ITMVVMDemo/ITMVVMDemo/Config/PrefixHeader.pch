@@ -20,6 +20,8 @@
 #import "UIImageView+WebCache.h"
 #import "ASIFormDataRequest.h"
 //#import "ASIHTTPRequest.h"
+#pragma mark - 头文件
+#import "BXExtensions.h"
 #endif /* PrefixHeader_pch */
 
 

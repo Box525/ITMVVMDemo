@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "ITIntroductionVC.h"
+#import "ITTabBarVC.h"
 
 typedef void(^block)(void);
 
@@ -53,6 +54,8 @@ typedef void(^block)(void);
     self.window = [[UIWindow alloc]initWithFrame:kMainBounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    ITTabBarVC *rootVC = [[ITTabBarVC alloc]init];
+    
     
     //引导界面
     ITIntroductionVC *introductionVC = [ITIntroductionVC new];
@@ -62,9 +65,10 @@ typedef void(^block)(void);
     __block ITIntroductionVC *weakSelf = introductionVC;
     [introductionVC enterRootVC:^{
         [weakSelf.view removeFromSuperview];
+        self.window.rootViewController = rootVC;
     }];
     
-    
+    self.window.rootViewController = weakSelf;
     
     
     
