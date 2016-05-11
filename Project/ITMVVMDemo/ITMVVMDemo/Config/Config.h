@@ -40,6 +40,8 @@ typedef void(^ITFinishedBlock)(id responseObject, NSError *error);
 #endif
 
 #define NETWORKINGURL @"http://www.baidu.com"
+//风格和主题GET
+#define kURLStyleAndTheme @"http://api.nanyibang.com/match-classify?age=29&system_name=iphone&versionCode=205"
 
 /**
  *  弱引用
@@ -53,6 +55,7 @@ typedef void(^ITFinishedBlock)(id responseObject, NSError *error);
 #define BXScreenBounds [UIScreen mainScreen].bounds
 #define BXKeyWindow [UIApplication sharedApplication].keyWindow
 
+//
 // 随机色
 #define BXRandomColor BXColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 

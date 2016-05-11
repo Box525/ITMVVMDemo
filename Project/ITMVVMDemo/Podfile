@@ -8,4 +8,5 @@ target 'ITMVVMDemo' do
     pod 'SDWebImage'
     pod 'SDAutoLayout'
     pod 'ASIHTTPRequest', '~> 1.8.2'
+    pod 'MJRefresh'
 end

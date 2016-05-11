@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		46060FED250496D0642BBD60 /* Pods_ITMVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFADA642D5C456770DD68C3 /* Pods_ITMVVMDemo.framework */; };
+		9C6E40B31CE32CF2002F1A02 /* STData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40A91CE32CF2002F1A02 /* STData.m */; };
+		9C6E40B41CE32CF2002F1A02 /* STHDSTDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40AC1CE32CF2002F1A02 /* STHDSTDataBase.m */; };
+		9C6E40B51CE32CF2002F1A02 /* STItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40AE1CE32CF2002F1A02 /* STItems.m */; };
+		9C6E40B61CE32CF2002F1A02 /* STSecondMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40B01CE32CF2002F1A02 /* STSecondMenu.m */; };
+		9C6E40B71CE32CF2002F1A02 /* STUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40B21CE32CF2002F1A02 /* STUser.m */; };
 		9C8F4E541CB77CCF002716BD /* Like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F4E521CB77CCF002716BD /* Like@2x.png */; };
 		9C8F4E551CB77CCF002716BD /* Like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F4E531CB77CCF002716BD /* Like@3x.png */; };
 		9C93DB311CB3E37100FD58E7 /* NetRequestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C93DB301CB3E37100FD58E7 /* NetRequestClass.m */; };
@@ -65,6 +70,17 @@
 		0160ADBC8A392A7AFFCE4094 /* Pods-ITMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITMVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ITMVVMDemo/Pods-ITMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 		0AFADA642D5C456770DD68C3 /* Pods_ITMVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITMVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7857761AED50710D84C41EB2 /* Pods-ITMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ITMVVMDemo/Pods-ITMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9C6E40A81CE32CF2002F1A02 /* STData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STData.h; sourceTree = "<group>"; };
+		9C6E40A91CE32CF2002F1A02 /* STData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STData.m; sourceTree = "<group>"; };
+		9C6E40AA1CE32CF2002F1A02 /* STDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDataModels.h; sourceTree = "<group>"; };
+		9C6E40AB1CE32CF2002F1A02 /* STHDSTDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHDSTDataBase.h; sourceTree = "<group>"; };
+		9C6E40AC1CE32CF2002F1A02 /* STHDSTDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHDSTDataBase.m; sourceTree = "<group>"; };
+		9C6E40AD1CE32CF2002F1A02 /* STItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STItems.h; sourceTree = "<group>"; };
+		9C6E40AE1CE32CF2002F1A02 /* STItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STItems.m; sourceTree = "<group>"; };
+		9C6E40AF1CE32CF2002F1A02 /* STSecondMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSecondMenu.h; sourceTree = "<group>"; };
+		9C6E40B01CE32CF2002F1A02 /* STSecondMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSecondMenu.m; sourceTree = "<group>"; };
+		9C6E40B11CE32CF2002F1A02 /* STUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUser.h; sourceTree = "<group>"; };
+		9C6E40B21CE32CF2002F1A02 /* STUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUser.m; sourceTree = "<group>"; };
 		9C8F4E521CB77CCF002716BD /* Like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like@2x.png"; sourceTree = "<group>"; };
 		9C8F4E531CB77CCF002716BD /* Like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like@3x.png"; sourceTree = "<group>"; };
 		9C93DB2F1CB3E37100FD58E7 /* NetRequestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequestClass.h; sourceTree = "<group>"; };
@@ -183,6 +199,32 @@
 				0AFADA642D5C456770DD68C3 /* Pods_ITMVVMDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C6E40A61CE32CF2002F1A02 /* HDStyleAndTheme */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E40A71CE32CF2002F1A02 /* STModel */,
+			);
+			path = HDStyleAndTheme;
+			sourceTree = "<group>";
+		};
+		9C6E40A71CE32CF2002F1A02 /* STModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E40A81CE32CF2002F1A02 /* STData.h */,
+				9C6E40A91CE32CF2002F1A02 /* STData.m */,
+				9C6E40AA1CE32CF2002F1A02 /* STDataModels.h */,
+				9C6E40AB1CE32CF2002F1A02 /* STHDSTDataBase.h */,
+				9C6E40AC1CE32CF2002F1A02 /* STHDSTDataBase.m */,
+				9C6E40AD1CE32CF2002F1A02 /* STItems.h */,
+				9C6E40AE1CE32CF2002F1A02 /* STItems.m */,
+				9C6E40AF1CE32CF2002F1A02 /* STSecondMenu.h */,
+				9C6E40B01CE32CF2002F1A02 /* STSecondMenu.m */,
+				9C6E40B11CE32CF2002F1A02 /* STUser.h */,
+				9C6E40B21CE32CF2002F1A02 /* STUser.m */,
+			);
+			path = STModel;
 			sourceTree = "<group>";
 		};
 		9C93DB351CB4BEBA00FD58E7 /* HDModel */ = {
@@ -426,6 +468,7 @@
 		9C9B45F91CAE790500A032BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C6E40A61CE32CF2002F1A02 /* HDStyleAndTheme */,
 				9C93DB351CB4BEBA00FD58E7 /* HDModel */,
 			);
 			path = Model;
@@ -638,6 +681,7 @@
 				9C9B45E61CAE783500A032BA /* AppDelegate.m in Sources */,
 				9C93DB511CB4D6FB00FD58E7 /* ViewModelClass.m in Sources */,
 				9C93DB4D1CB4BEBA00FD58E7 /* HDIssues.m in Sources */,
+				9C6E40B61CE32CF2002F1A02 /* STSecondMenu.m in Sources */,
 				9C99BB671CE1D8D900885265 /* BXTabBarBigButton.m in Sources */,
 				9C99BB7F1CE1DF3000885265 /* ITNavigationController.m in Sources */,
 				9C93DB491CB4BEBA00FD58E7 /* HDContents.m in Sources */,
@@ -650,6 +694,7 @@
 				9C93DB5F1CB6060500FD58E7 /* ProductItemCell.m in Sources */,
 				9C99BBB21CE1E16600885265 /* UIView+Runtime.m in Sources */,
 				9C93DB551CB4D96900FD58E7 /* PublicProductModelClass.m in Sources */,
+				9C6E40B31CE32CF2002F1A02 /* STData.m in Sources */,
 				9C93DB481CB4BEBA00FD58E7 /* HDContent.m in Sources */,
 				9C99BBAB1CE1E16600885265 /* UIImage+Extension.m in Sources */,
 				9C99BBAF1CE1E16600885265 /* UITextControl+FaultTolerance.m in Sources */,
@@ -657,6 +702,8 @@
 				9C99BB751CE1DDE300885265 /* SetVC.m in Sources */,
 				9C99BBB01CE1E16600885265 /* UIView+Extension.m in Sources */,
 				9C99BBA41CE1E16600885265 /* NSDictionary+Extension.m in Sources */,
+				9C6E40B71CE32CF2002F1A02 /* STUser.m in Sources */,
+				9C6E40B41CE32CF2002F1A02 /* STHDSTDataBase.m in Sources */,
 				9C99BBA21CE1E16600885265 /* Foundation+Log.m in Sources */,
 				9C99BB6C1CE1D93800885265 /* ITIntroductionVC.m in Sources */,
 				9C93DB4C1CB4BEBA00FD58E7 /* HDImage.m in Sources */,
@@ -673,6 +720,7 @@
 				9C99BBB11CE1E16600885265 /* UIView+IBExtension.m in Sources */,
 				9C99BBA71CE1E16600885265 /* UIBarButtonItem+Extension.m in Sources */,
 				9C93DB311CB3E37100FD58E7 /* NetRequestClass.m in Sources */,
+				9C6E40B51CE32CF2002F1A02 /* STItems.m in Sources */,
 				9C9B45E31CAE783500A032BA /* main.m in Sources */,
 				9C93DB4B1CB4BEBA00FD58E7 /* HDHDBasicClass.m in Sources */,
 				9C99BBAA1CE1E16600885265 /* UIFont+Extension.m in Sources */,

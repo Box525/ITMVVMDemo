@@ -96,24 +96,24 @@
 - (void)addAllChildVc {
     // 添加初始化子控制器
     HomeVC *home = [[HomeVC alloc] init];
-    home.view.backgroundColor = BXRandomColor;
+    home.view.backgroundColor = Global_mainBackgroundColor;
     [self addOneChildVC:home title:@"商品" imageName:@"tabBar_icon_schedule_default" selectedImageName:@"tabBar_icon_schedule"];
     
     ShoppingVC *customer = [[ShoppingVC alloc] init];
     [self addOneChildVC:customer title:@"购物车" imageName:@"tabBar_icon_customer_default" selectedImageName:@"tabBar_icon_customer"];
-    customer.view.backgroundColor = BXGlobalBg;
+    customer.view.backgroundColor = Global_mainBackgroundColor;
     
     UIViewController *insurance = [[UIViewController alloc] init];
     [self addOneChildVC:insurance title:@"123" imageName:@"tabBar_publish_icon" selectedImageName:@"tabBar_publish_icon"];
-    insurance.view.backgroundColor = BXRandomColor;
+    insurance.view.backgroundColor = Global_mainBackgroundColor;
     
     UIViewController *compare = [[UIViewController alloc] init];
     [self addOneChildVC:compare title:@"456" imageName:@"tabBar_icon_contrast_default" selectedImageName:@"tabBar_icon_contrast"];
-    compare.view.backgroundColor = BXRandomColor;
+    compare.view.backgroundColor = Global_mainBackgroundColor;
     
     SetVC *profile = [[SetVC alloc]init];
     [self addOneChildVC:profile title:@"我的" imageName:@"tabBar_icon_mine_default" selectedImageName:@"tabBar_icon_mine"];
-    profile.view.backgroundColor = BXRandomColor;
+    profile.view.backgroundColor = Global_mainBackgroundColor;
 
 }
 
