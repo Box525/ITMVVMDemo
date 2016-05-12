@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 
 #define kMainBounds [UIScreen mainScreen].bounds
+#define kMainBoundsW [UIScreen mainScreen].bounds.size.width
+#define kMainBoundsH [UIScreen mainScreen].bounds.size.height
 
 #define SDColor(r, g, b, a) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:a]
 
@@ -31,6 +33,7 @@ typedef void(^Succeed)(id responseObject);
 typedef void(^Failed)(NSError *error);
 
 typedef void(^ITFinishedBlock)(id responseObject, NSError *error);
+typedef void(^CallBackMessageBlock)(id resposeObject);
 //disable loggin on production
 #ifdef DEBUG
 #define KSLog(format, ...) CFShow((__bridge CFTypeRef)[NSString stringWithFormat:format, ## __VA_ARGS__]);

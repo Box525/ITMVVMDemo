@@ -9,24 +9,54 @@
 #import "HomeVC.h"
 #import "NetRequestClass.h"
 #import "STDataModels.h"
+#import "MJRefresh.h"
+#import "StyleView.h"
+#import "ThemeView.h"
 
 @interface HomeVC ()
+
+@property (nonatomic,strong)STHDSTDataBase *datas;
 
 @end
 
 @implementation HomeVC
 
+- (void)dealloc {
+    self.datas = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"商品";
+    self.automaticallyAdjustsScrollViewInsets = NO;
     //
     
     [self gGETRequest];
-    [self initView];
+//    [self initView];
 }
 
 - (void)initView {
+    
+    if (!self.datas) {
+        return;
+    }
+    
+    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64)];
+    scrollView.backgroundColor = [UIColor greenColor];
+    
+    [self.view addSubview:scrollView];
+    
+    StyleView *styleView = [[StyleView alloc]initWithFrame:CGRectMake(0, 10, kMainBoundsW, 200)];
+    styleView.modelD = self.datas;
+    [scrollView addSubview:styleView];
+    
+    ThemeView *themeView = [[ThemeView alloc]initWithFrame:CGRectMake(0, 220, kMainBoundsW, 100)];
+    themeView.backgroundColor = [UIColor blueColor];
+    [scrollView addSubview:themeView];
+    
+    
+    
     
 }
 
@@ -54,12 +84,20 @@
                             KSLog(@"****************************");
                         }
                     }
+                    
+                    self.datas = model;
+                    
+                    [self initView];
+                }else{
+                    KSLog(@"No Data.......");
+                    //数据没有回来要处理
                 }
                 
                 
             }];
         } else {
             KSLog(@"NO Networking!!!");
+            
         }
     }];
 }

@@ -13,6 +13,8 @@
 		9C6E40B51CE32CF2002F1A02 /* STItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40AE1CE32CF2002F1A02 /* STItems.m */; };
 		9C6E40B61CE32CF2002F1A02 /* STSecondMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40B01CE32CF2002F1A02 /* STSecondMenu.m */; };
 		9C6E40B71CE32CF2002F1A02 /* STUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40B21CE32CF2002F1A02 /* STUser.m */; };
+		9C6E40BC1CE3453F002F1A02 /* StyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40BB1CE3453F002F1A02 /* StyleView.m */; };
+		9C6E40BF1CE34554002F1A02 /* ThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E40BE1CE34554002F1A02 /* ThemeView.m */; };
 		9C8F4E541CB77CCF002716BD /* Like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F4E521CB77CCF002716BD /* Like@2x.png */; };
 		9C8F4E551CB77CCF002716BD /* Like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F4E531CB77CCF002716BD /* Like@3x.png */; };
 		9C93DB311CB3E37100FD58E7 /* NetRequestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C93DB301CB3E37100FD58E7 /* NetRequestClass.m */; };
@@ -81,6 +83,10 @@
 		9C6E40B01CE32CF2002F1A02 /* STSecondMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSecondMenu.m; sourceTree = "<group>"; };
 		9C6E40B11CE32CF2002F1A02 /* STUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUser.h; sourceTree = "<group>"; };
 		9C6E40B21CE32CF2002F1A02 /* STUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUser.m; sourceTree = "<group>"; };
+		9C6E40BA1CE3453F002F1A02 /* StyleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleView.h; sourceTree = "<group>"; };
+		9C6E40BB1CE3453F002F1A02 /* StyleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleView.m; sourceTree = "<group>"; };
+		9C6E40BD1CE34554002F1A02 /* ThemeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeView.h; sourceTree = "<group>"; };
+		9C6E40BE1CE34554002F1A02 /* ThemeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeView.m; sourceTree = "<group>"; };
 		9C8F4E521CB77CCF002716BD /* Like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like@2x.png"; sourceTree = "<group>"; };
 		9C8F4E531CB77CCF002716BD /* Like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like@3x.png"; sourceTree = "<group>"; };
 		9C93DB2F1CB3E37100FD58E7 /* NetRequestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequestClass.h; sourceTree = "<group>"; };
@@ -227,6 +233,24 @@
 			path = STModel;
 			sourceTree = "<group>";
 		};
+		9C6E40B81CE344DA002F1A02 /* StyleView */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E40BA1CE3453F002F1A02 /* StyleView.h */,
+				9C6E40BB1CE3453F002F1A02 /* StyleView.m */,
+			);
+			path = StyleView;
+			sourceTree = "<group>";
+		};
+		9C6E40B91CE344DA002F1A02 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E40BD1CE34554002F1A02 /* ThemeView.h */,
+				9C6E40BE1CE34554002F1A02 /* ThemeView.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		9C93DB351CB4BEBA00FD58E7 /* HDModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +355,8 @@
 		9C99BB6D1CE1DDA000885265 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C6E40B81CE344DA002F1A02 /* StyleView */,
+				9C6E40B91CE344DA002F1A02 /* Theme */,
 				9C99BB701CE1DDC000885265 /* HomeVC.h */,
 				9C99BB711CE1DDC000885265 /* HomeVC.m */,
 			);
@@ -681,6 +707,7 @@
 				9C9B45E61CAE783500A032BA /* AppDelegate.m in Sources */,
 				9C93DB511CB4D6FB00FD58E7 /* ViewModelClass.m in Sources */,
 				9C93DB4D1CB4BEBA00FD58E7 /* HDIssues.m in Sources */,
+				9C6E40BF1CE34554002F1A02 /* ThemeView.m in Sources */,
 				9C6E40B61CE32CF2002F1A02 /* STSecondMenu.m in Sources */,
 				9C99BB671CE1D8D900885265 /* BXTabBarBigButton.m in Sources */,
 				9C99BB7F1CE1DF3000885265 /* ITNavigationController.m in Sources */,
@@ -712,6 +739,7 @@
 				9C99BBAD1CE1E16600885265 /* UILabel+Extension.m in Sources */,
 				9C99BB661CE1D8D900885265 /* BXTabBar.m in Sources */,
 				9C99BBA61CE1E16600885265 /* UIApplication+Extensions.m in Sources */,
+				9C6E40BC1CE3453F002F1A02 /* StyleView.m in Sources */,
 				9C99BB781CE1DDFB00885265 /* ShoppingVC.m in Sources */,
 				9C93DB471CB4BEBA00FD58E7 /* HDAuthor.m in Sources */,
 				9C93DB341CB4A38900FD58E7 /* RequestClient.m in Sources */,
