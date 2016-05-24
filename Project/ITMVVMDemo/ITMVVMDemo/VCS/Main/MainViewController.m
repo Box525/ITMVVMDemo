@@ -48,18 +48,45 @@
 }
 
 - (void)gGETRequest {
-    //http://gw.api.taobao.com/router/rest?sign=3B5E745F8A2FC2CB70F88E19AF6BA877&timestamp=2016-05-10+13%3A13%3A40&v=2.0&app_key=12129701&method=taobao.ju.groupids.get&partner_id=top-apitools&format=json&page_size=5&page_no=1&terminal_type=IPHONE&force_sensitive_param_fuzzy=true
     
-    NSString *url = @"http://gw.api.taobao.com/router/rest?sign=3B5E745F8A2FC2CB70F88E19AF6BA877&timestamp=2016-05-10+13%3A13%3A40&v=2.0&app_key=12129701&method=taobao.ju.groupids.get&partner_id=top-apitools&format=json&page_size=5&page_no=1&terminal_type=IPHONE&force_sensitive_param_fuzzy=true";
+    NSString *url = @"http://api.xiachufang.com/v2/issues/list.json?cursor=&origin=iphone&api_sign=eeec77fc9690c7c0b1e70f6a3fb021d2&size=2&timezone=Asia%2FShanghai&version=5.1.1&api_key=0f9f79be1dac5f003e7de6f876b17c00";
     [NetRequestClass netWorkReachabilityWithURLString:NETWORKINGURL  completion:^(BOOL netConnetState) {
         if (netConnetState) {
-            [NetRequestClass requestWithASIURL:url parmas:nil httpMethod:@"GET" completeBlock:^(id responseObject, NSError *error) {
-                KSLog(@"------post1---->%@",responseObject);
+            [NetRequestClass netRequestGETWithRequestURL:url WithParameter:nil WithReturnValeuBlock:^(id responseObject, NSError *error) {
+                if (!error) {
+                     KSLog(@"------post1---->%@",responseObject);
+                    [NetRequestClass netRequestGETWithRequestURL:@"http://gw.api.taobao.com/router/rest?sign=3B5E745F8A2FC2CB70F88E19AF6BA877&timestamp=2016-05-10+13%3A13%3A40&v=2.0&app_key=12129701&method=taobao.ju.groupids.get&partner_id=top-apitools&format=json&page_size=5&page_no=1&terminal_type=IPHONE&force_sensitive_param_fuzzy=true" WithParameter:nil WithReturnValeuBlock:^(id responseObject, NSError *error) {
+                        if (!error) {
+                            KSLog(@"------post222222---->%@",responseObject);
+                            
+                        }
+                    }];
+                }
             }];
-        } else {
+        }else{
             KSLog(@"NO Networking!!!");
         }
     }];
+
+    
+    //http://gw.api.taobao.com/router/rest?sign=3B5E745F8A2FC2CB70F88E19AF6BA877&timestamp=2016-05-10+13%3A13%3A40&v=2.0&app_key=12129701&method=taobao.ju.groupids.get&partner_id=top-apitools&format=json&page_size=5&page_no=1&terminal_type=IPHONE&force_sensitive_param_fuzzy=true
+    
+//    NSString *url = @"http://api.xiachufang.com/v2/issues/list.json?cursor=&origin=iphone&api_sign=eeec77fc9690c7c0b1e70f6a3fb021d2&size=2&timezone=Asia%2FShanghai&version=5.1.1&api_key=0f9f79be1dac5f003e7de6f876b17c00";
+//    [NetRequestClass netWorkReachabilityWithURLString:NETWORKINGURL  completion:^(BOOL netConnetState) {
+//        if (netConnetState) {
+//            [NetRequestClass requestWithASIURL:url parmas:nil httpMethod:@"GET" completeBlock:^(id responseObject, NSError *error) {
+//                KSLog(@"------post1---->%@",responseObject);
+//                
+//                [NetRequestClass requestWithASIURL:@"http://gw.api.taobao.com/router/rest?sign=3B5E745F8A2FC2CB70F88E19AF6BA877&timestamp=2016-05-10+13%3A13%3A40&v=2.0&app_key=12129701&method=taobao.ju.groupids.get&partner_id=top-apitools&format=json&page_size=5&page_no=1&terminal_type=IPHONE&force_sensitive_param_fuzzy=true" parmas:nil httpMethod:@"GET" completeBlock:^(id responseObject, NSError *error) {
+//                    KSLog(@"------post2222222---->%@",responseObject);
+//                    
+//                    
+//                }];
+//            }];
+//        } else {
+//            KSLog(@"NO Networking!!!");
+//        }
+//    }];
 }
 
 - (void)pPostRequest{
@@ -108,10 +135,10 @@
     [NetRequestClass netWorkReachabilityWithURLString:NETWORKINGURL  completion:^(BOOL netConnetState) {
         if (netConnetState) {
             [NetRequestClass requestWithASIURL:url parmas:(NSMutableDictionary *)dict httpMethod:@"POST" completeBlock:^(id responseObject, NSError *error) {
-                KSLog(@"------post1---->%@",responseObject);
+                KSLog(@"-----------post1---->%@",responseObject);
                 [NetRequestClass netWorkReachabilityWithURLString:NETWORKINGURL  completion:^(BOOL netConnetState) {
                     if (netConnetState) {
-                        [NetRequestClass requestWithASIURL:url parmas:(NSMutableDictionary *)dict httpMethod:@"POST" completeBlock:^(id responseObject, NSError *error) {
+                        [NetRequestClass requestWithASIURL:url parmas:(NSMutableDictionary *)dict httpMethod:@"GET" completeBlock:^(id responseObject, NSError *error) {
                             KSLog(@"-------------------post2---->%@",responseObject);
                         }];
                     } else {

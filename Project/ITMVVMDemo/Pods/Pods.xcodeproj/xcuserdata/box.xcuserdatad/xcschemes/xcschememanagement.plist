@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFDownloadRequestOperation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,7 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GCJSONKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -49,10 +64,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YTKNetwork.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
+		<key>0BF8569A1D17D47E1A86EB020383E8D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +82,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24C16EAA5FA10D5B26E7A879C2B70DC3</key>
+		<key>3D9C35FCF5E50D6109BFC15753669034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41B236DDD8C286B7D19940D98EE7F71C</key>
+		<key>4149B3939C0744EA82CEFABA9C67D6A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>602690F2C9B5077655597B01AB6F88ED</key>
+		<key>5C2702337D058C655BA134353D617C6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +102,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>951B3FF97A43BEDC1AA3F1F5401C012C</key>
+		<key>709D835AC4CE7F3AC90E3B029C823184</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>742BF6D339CC20CF429D3E18039D8264</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A2E8FED01C8A6BC8ADFCF3C3B78368F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A9A83F63385AA43314397B8DD375464B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2B1DE764429F92865AF6ED7EA9EBC00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7B992610B7DF4D3D0A5180BDA1087BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

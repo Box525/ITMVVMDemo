@@ -14,7 +14,7 @@
 typedef void(^block)(void);
 
 @interface AppDelegate (){
-    
+
 }
 
 @property(nonatomic,copy)block bbb;
@@ -49,6 +49,7 @@ typedef void(^block)(void);
 //    
 //    a.bbb();
 //    b.bbb();
+
     
     
     self.window = [[UIWindow alloc]initWithFrame:kMainBounds];

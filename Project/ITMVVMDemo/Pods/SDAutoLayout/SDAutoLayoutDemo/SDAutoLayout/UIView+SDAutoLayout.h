@@ -63,6 +63,7 @@ typedef SDAutoLayoutModel *(^WidthHeight)(CGFloat value);
 typedef SDAutoLayoutModel *(^WidthHeightEqualToView)(UIView *toView, CGFloat ratioValue);
 typedef SDAutoLayoutModel *(^AutoHeight)(CGFloat ratioValue);
 typedef SDAutoLayoutModel *(^SameWidthHeight)();
+typedef SDAutoLayoutModel *(^Offset)(CGFloat value);
 typedef void (^SpaceToSuperView)(UIEdgeInsets insets);
 
 @interface SDAutoLayoutModel : NSObject
@@ -159,6 +160,9 @@ typedef void (^SpaceToSuperView)(UIEdgeInsets insets);
 /** 传入UIEdgeInsetsMake(top, left, bottom, right)，可以快捷设置view到其父view上左下右的间距  */
 @property (nonatomic, copy, readonly) SpaceToSuperView spaceToSuperView;
 
+/** 设置偏移量，参数为“(CGFloat value)，目前只有带有equalToView的方法可以设置offset” */
+@property (nonatomic, copy, readonly) Offset offset;
+
 @property (nonatomic, weak) UIView *needsAutoResizeView;
 
 @end
@@ -224,8 +228,14 @@ typedef void (^SpaceToSuperView)(UIEdgeInsets insets);
 /** 设置类似collectionView效果的固定间距自动宽度浮动子view */
 - (void)setupAutoWidthFlowItems:(NSArray *)viewsArray withPerRowItemsCount:(NSInteger)perRowItemsCount verticalMargin:(CGFloat)verticalMargin horizontalMargin:(CGFloat)horizontalMagin;
 
+/** 清除固定间距自动宽度浮动子view设置 */
+- (void)clearAutoWidthFlowItemsSettings;
+
 /** 设置类似collectionView效果的固定宽带自动间距浮动子view */
 - (void)setupAutoMarginFlowItems:(NSArray *)viewsArray withPerRowItemsCount:(NSInteger)perRowItemsCount itemWidth:(CGFloat)itemWidth verticalMargin:(CGFloat)verticalMargin;
+
+/** 清除固定宽带自动间距浮动子view设置 */
+- (void)clearAutoMarginFlowItemsSettings;
 
 @end
 
@@ -338,6 +348,7 @@ typedef void (^SpaceToSuperView)(UIEdgeInsets insets);
 
 @property (nonatomic, strong) NSNumber *value;
 @property (nonatomic, weak) UIView *refView;
+@property (nonatomic, assign) CGFloat offset;
 
 @end
 
@@ -346,19 +357,21 @@ typedef void (^SpaceToSuperView)(UIEdgeInsets insets);
 
 @interface UIView (SDChangeFrame)
 
-@property (nonatomic) CGFloat left;
-@property (nonatomic) CGFloat top;
-@property (nonatomic) CGFloat right;
-@property (nonatomic) CGFloat bottom;
-@property (nonatomic) CGFloat centerX;
-@property (nonatomic) CGFloat centerY;
+@property (nonatomic) BOOL shouldReadjustFrameBeforeStoreCache;
 
-@property (nonatomic) CGFloat width;
-@property (nonatomic) CGFloat height;
+@property (nonatomic) CGFloat left_sd;
+@property (nonatomic) CGFloat top_sd;
+@property (nonatomic) CGFloat right_sd;
+@property (nonatomic) CGFloat bottom_sd;
+@property (nonatomic) CGFloat centerX_sd;
+@property (nonatomic) CGFloat centerY_sd;
+
+@property (nonatomic) CGFloat width_sd;
+@property (nonatomic) CGFloat height_sd;
 
 
-@property (nonatomic) CGPoint origin;
-@property (nonatomic) CGSize size;
+@property (nonatomic) CGPoint origin_sd;
+@property (nonatomic) CGSize size_sd;
 
 @end
 
@@ -372,6 +385,8 @@ typedef void (^SpaceToSuperView)(UIEdgeInsets insets);
 @property (nonatomic, strong) NSIndexPath *sd_indexPath;
 
 @property (nonatomic, assign) BOOL hasSetFrameWithCache;
+
+@property (nonatomic) BOOL shouldReadjustFrameBeforeStoreCache;
 
 
 

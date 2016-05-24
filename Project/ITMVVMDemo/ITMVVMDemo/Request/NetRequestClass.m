@@ -16,19 +16,24 @@
 + (void) netRequestGETWithRequestURL: (NSString *) requestURLString
                        WithParameter: (NSDictionary *) parameter
                 WithReturnValeuBlock: (ITFinishedBlock) block {
-    [[RequestClient sharedRequestInstance] GET:requestURLString parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        block(responseObject,nil);
-        
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        block(nil,error);
-        
-        
-        
-    }];
+//    [[RequestClient sharedRequestInstance] GET:requestURLString parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//        block(responseObject,nil);
+//        
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//        block(nil,error);
+//        
+//        
+//        
+//    }];
     
+    [[RequestClient sharedRequestInstance] GET:requestURLString parameters:parameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        block(responseObject,nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        block(nil,error);
+    }];
     
 }
 
@@ -42,22 +47,28 @@
     client.responseSerializer = [AFHTTPResponseSerializer serializer];
     client.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     
-    [[RequestClient sharedRequestInstance] POST:requestURLString parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        KSLog(@"%@",task.error.localizedDescription);
-        
-//        NSData *data = [responseObject JSONData];
-//        NSDictionary *dict = [data objectFromJSONData];
-//        KSLog(@"%@",dict);
+//    [[RequestClient sharedRequestInstance] POST:requestURLString parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//        KSLog(@"%@",task.error.localizedDescription);
+//        
+////        NSData *data = [responseObject JSONData];
+////        NSDictionary *dict = [data objectFromJSONData];
+////        KSLog(@"%@",dict);
+//        block(responseObject,nil);
+//        
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//        
+//        block(nil,error);
+//        
+//        
+//    }];
+    
+    [[RequestClient sharedRequestInstance] POST:requestURLString parameters:parameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         block(responseObject,nil);
-        
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        
         block(nil,error);
-        
-        
     }];
     
 }
@@ -176,6 +187,7 @@
 
 + (void) netWorkReachabilityWithURLString:(NSString *) strUrl completion:(NetWorkBlock)netWorkBlock {
     __block BOOL netState = NO;
+    //TODO: 1234567890
     NSURL *baseURL = [NSURL URLWithString:strUrl];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithBaseURL:baseURL];
 //    RequestClient *manager = [RequestClient sharedRequestInstance];
@@ -184,6 +196,7 @@
     
     [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
+                //???: 不知道
             case AFNetworkReachabilityStatusReachableViaWWAN:
             case AFNetworkReachabilityStatusReachableViaWiFi:
                 [operationQueue setSuspended:NO];

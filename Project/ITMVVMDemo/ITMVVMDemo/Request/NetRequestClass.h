@@ -22,6 +22,13 @@
                 WithReturnValeuBlock: (ITFinishedBlock) block;
 
 #pragma mark POST请求
+/**
+ *  <#Description#>
+ *
+ *  @param requestURLString <#requestURLString description#>
+ *  @param parameter        <#parameter description#>
+ *  @param block            <#block description#>
+ */
 + (void) netRequestPOSTWithRequestURL: (NSString *) requestURLString
                        WithParameter: (NSDictionary *) parameter
                 WithReturnValeuBlock: (ITFinishedBlock) block;
