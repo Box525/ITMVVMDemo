@@ -63,6 +63,7 @@ typedef void(^block)(void);
     
     [self.window addSubview:introductionVC.view];
     
+
     __block ITIntroductionVC *weakSelf = introductionVC;
     [introductionVC enterRootVC:^{
         [weakSelf.view removeFromSuperview];

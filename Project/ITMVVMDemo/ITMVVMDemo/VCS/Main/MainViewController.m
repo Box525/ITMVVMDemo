@@ -202,9 +202,6 @@
             self.products = data.content.issues;
             
             [_listTable reloadData];
-            
-            
-            
         }
     }];
     [products fetchPublicProductList];
